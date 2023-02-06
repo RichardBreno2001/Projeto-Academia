@@ -108,7 +108,7 @@ main {
 }
 .btn:hover {
     background-color: rgba(128, 128, 128, 0.63);
-    border-color: orange;
+    border-color: rgb(160, 119, 4);
     text-shadow: 2px 3px 3px black;
 }
 #caixa {
