@@ -5,7 +5,7 @@
 }
 
 body {
-    background: linear-gradient(rgba(0, 0, 0, 0.645), rgba(0, 0, 0, 0.623)), url('imagens/376147-4k-wallpaper.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.832), rgba(0, 0, 0, 0.815)), url('imagens/376147-4k-wallpaper.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -30,17 +30,34 @@ header > h1 {
 
 header > nav > ul {
     display: flex;
+    column-gap: 15px;
 }
 header > nav > ul > li {
     list-style-type: none;
     color: white;
-    margin: 5px;
     font-size: 1.4em;
     cursor: pointer;
 }
-a {
+a.menu {
     text-decoration: none;
     color: white;
+    position: relative;
+}
+a.menu:hover {
+    color: rgb(160, 119, 4);
+}
+a.menu::before {
+    content: ' ';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    height: 1px;
+    background-color: white;
+    transition: all 1.5s ease;
+}
+a.menu:hover::before {
+    width: 100%;
 }
 
 /* CORPO */
@@ -50,10 +67,51 @@ main {
     position: relative;
 }
 #itens {
-    background-color: rgb(255, 255, 255);
-    width: 500px;
+    width: 800px;
+    height: 400px;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
     position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+#itens > h2 {
+    font-size: 2.4em;
+    color: white;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 1px 1px 1px black;
+}
+#itens > p {
+    text-align: center;
+    color: rgb(204, 202, 202);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 1.5em;
+}
+
+/* BOTÕES */
+.btn  {
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.014);
+    height: 70px;
+    font-size: 1.2em;
+    color: white;
+    border-color: white;
+    width: 500px;
+    margin: 10px;
+    letter-spacing: 5px;
+    transition: 1s;
+    font-weight: bold;
+}
+.btn:hover {
+    background-color: rgba(128, 128, 128, 0.63);
+    border-color: orange;
+    text-shadow: 2px 3px 3px black;
+}
+#caixa {
+    width: 500px;
+    margin: auto;
 }
